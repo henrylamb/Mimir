@@ -4,7 +4,7 @@ This is an opinonated library of helpful graphQL API functionality.
 
 To download use the following command: 
 
-go get "github.com/henrylamb/Mimir.v.06"
+go get "github.com/henrylamb/Mimir"
 
 ## Contents
 
