@@ -35,3 +35,5 @@ func (r *Repository) DeleteData(whereQuery map[string]interface{}, deleteObject 
 	result := r.Db.Where(whereQuery).Delete(deleteObject)
 	return result.Error
 }
+
+//note for commit
