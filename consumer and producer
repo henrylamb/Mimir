@@ -1,0 +1,3 @@
+You can't standardize the consumer and producer functions due to the code being in-bedded within
+its self quite a lot. Such as the consume claim function and interface. This will require
+a bespoke implementation for each persistence service. 
