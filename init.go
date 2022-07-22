@@ -1,9 +1,9 @@
 /**
- * Author: Mitch Allen
+ * Author: Henry Lamb
  * File: init.go
  */
 
-package lib
+package main
 
 import (
 	"fmt"
