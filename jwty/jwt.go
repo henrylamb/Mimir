@@ -1,4 +1,4 @@
-package jwt
+package jwty
 
 import (
 	"github.com/dgrijalva/jwt-go"
@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// GenerateToken generates a jwt token and assign a username to it's claims and return it
+// GenerateToken generates a jwty token and assign a username to it's claims and return it
 func GenerateToken(setClaimValue, setClaimName string, secretKey []byte) (string, error) {
 	token := jwt.New(jwt.SigningMethodHS256)
 	/* Create a map to store our claims */
@@ -22,7 +22,7 @@ func GenerateToken(setClaimValue, setClaimName string, secretKey []byte) (string
 	return tokenString, nil
 }
 
-// ParseToken parses a jwt token and returns the username in its claims.
+// ParseToken parses a jwty token and returns the username in its claims.
 //If the claim that has been found matches the va;ue will be returned and that identifaction value
 //will be passed onto the next http handler func
 func ParseToken(tokenStr string, findClaim string, secretKey []byte) (string, error) {
@@ -73,7 +73,7 @@ func Auth() func(handler http.Handler) http.Handler {
 				return
 			}
 
-			//validate jwt token
+			//validate jwty token
 			tokenStr := header
 			username, err := ParseToken(tokenStr)
 			if err != nil {
