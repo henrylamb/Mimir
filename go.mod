@@ -1,4 +1,4 @@
-module github.com/henrylamb/Mimir@v0.3.0
+module github.com/henrylamb/Mimir
 
 go 1.18
 
